@@ -1,0 +1,158 @@
+*{
+	padding: 0;
+	margin: 0;
+  border: 0;
+  color: #fff;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+
+
+
+
+
+
+.section_1 {
+	
+	text-align: center;
+	background: url('../img/background_slide_1.jpg') no-repeat center/cover;	
+}
+.section_1 .title {
+	font-size: 200px;
+}
+.section_1 .subtitle {
+	font-size: 100px;
+}
+.nav {
+	position: fixed;
+	z-index: 100;
+	margin: 40px;
+}
+
+.nav li {
+  display: inline-block;
+  padding: 10px;
+  background-color: rgb(255, 255, 255, 0.3);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.nav li {
+  margin-left: 15px;
+}
+
+.nav li.active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav li:hover {
+  background-color: rgb(255, 255, 255, 0.6);
+}
+
+.nav a {
+  color: #fff;
+}
+
+.section_2 {
+	background: url('../img/background_slides.jpg') no-repeat center/cover;
+	padding: 0 !important;
+}
+
+.about {
+	display: flex;
+	justify-content: space-around;
+	height: 100%;
+}
+
+.about_video {
+	display: flex;
+	align-items: center;
+	vertical-align: middle;
+	width: 50%;
+}
+
+.about_text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	vertical-align: middle;
+	width: 50%;
+	text-align: center;
+	justify-content: space-around;
+}
+.about_title {
+	font-size: 60px;
+}
+.about_descr {
+	font-size: 35px;
+}
+
+.abc {
+	height: 400px !important;
+}
+
+.slider {
+	position: relative;
+	/* border: 2px solid white; */
+	height: 400px !important;
+}
+.slide {
+	padding: 0 !important;
+	/* border: 2px solid white; */
+	height: 400px !important;
+}
+
+.feed {
+	display: flex;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+.feed_text_block {
+	text-align: left;
+	margin-left: 30px;
+}
+.feed_title {
+	font-size: 40px;
+}
+.feed_subtitle {
+	font-size: 30px;
+	margin-bottom: 15px;
+}
+.feed_descr {
+	font-size: 20px;
+}
+
+.section_3 {
+	background: url('../img/background_slides.jpg') no-repeat center/cover;
+}

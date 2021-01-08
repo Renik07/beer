@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', function() {
-	console.log('Hello');
+	/* slider */
 	const slider = document.querySelector('.slider__inner'),
 				sliderWrapper = document.querySelector('.slider__wrapper'),
 				slides = document.querySelectorAll('.slider__item'),
@@ -28,5 +28,14 @@ window.addEventListener('DOMContentLoaded', function() {
 		}
 		sliderWrapper.style.transform = `translateX(-${offset}px)`;
 	});
-	console.log(width);
+
+	/* modal */
+	const modal = document.querySelector('.modal'),
+				modalBtn = document.querySelector('.modal__button');
+
+	modalBtn.addEventListener('click', () => {
+		modal.classList.add('hide');
+		document.body.style.overflow = 'auto';
+	});
+	
 });

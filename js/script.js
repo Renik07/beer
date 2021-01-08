@@ -37,5 +37,20 @@ window.addEventListener('DOMContentLoaded', function() {
 		modal.classList.add('hide');
 		document.body.style.overflow = 'auto';
 	});
+
+	/* плавный скролл */
+	const anchors = document.querySelectorAll('a[href*="#"]');
+
+	anchors.forEach(anchor => {
+		anchor.addEventListener('click', (e) => {
+			e.preventDefault();
+			const href = anchor.getAttribute('href');
+
+			document.querySelector(href).scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+			});
+		});
+	});
 	
 });

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
 *{
 	padding: 0;
 	margin: 0;
@@ -15,6 +17,7 @@ a:focus,a:active{outline: none;}
 nav,footer,header,aside{display: block;}
 
 html,body{
+	font-family: 'Didact Gothic', sans-serif;
 	overflow: hidden;
 	height: 100%;
 	width: 100%;
@@ -97,9 +100,47 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 .header__title {
 	font-size: 160px;
+	margin-top: 10%;
+	text-transform: uppercase;
 }
 .header__subtitle {
-	font-size: 80px;
+	font-size: 60px;
+	margin-top: 5%;
+}
+
+.header__arrow {
+	margin: 0 auto;
+	margin-top: 20%;
+}
+.header__arrow span {
+	display: block;
+	width: 25px;
+	height: 25px;
+	border-bottom: 3px solid rgba(255, 255, 255, 0.6);
+	border-right: 3px solid rgba(255, 255, 255, 0.6);
+	transform: rotate(45deg);
+	margin: -10px;
+	animation: down 2s infinite;
+}
+
+.header__arrow span:nth-child(2) {
+	animation-delay: -0.2s;
+}
+.header__arrow span:nth-child(3) {
+	animation-delay: -0.4s;
+}
+@keyframes down {
+	0% {
+		opacity: 0;
+		transform: rotate(45deg) translate(-20px,-20px);
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: rotate(45deg) translate(20px,20px);
+	}
 }
 
 /* content */
@@ -123,12 +164,12 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 .content__title {
 	font-size: 40px;
-	margin-bottom: 20px;
+	text-transform: uppercase;
 }
 
 .content__text {
 	font-size: 30px;
-	margin-bottom: 50px;
+	margin-top: 50px;
 }
 
 .content__text a:hover {
@@ -140,6 +181,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	padding: 0px 60px;
 	position: relative;
 	margin: 0 auto;
+	margin-top: 100px;
 }
 
 .slider__inner {
@@ -158,6 +200,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 .slider__image {
 	width: 100%;
+	border-radius: 100%;
 }
 
 .slider__text {
@@ -170,6 +213,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 .slider__title {
 	font-size: 30px;
+	margin-bottom: -30px;
 }
 .slider__subtitle {
 	font-size: 20px;
@@ -181,28 +225,39 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 .slider__arrow {
 	position: absolute;
-	width: 0px;
-	height: 0px;
-	border: 20px solid transparent;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border-bottom: 3px solid rgba(255, 255, 255, 0.6);
+	border-right: 3px solid rgba(255, 255, 255, 0.6);
+	transition: 0.5s all;
 	cursor: pointer;
 }
 
 .arrow__left {
 	left: 0;
 	top: 50%;
-	transform: translateY(-50%);
-	border-right: 20px solid white;
+	transform: translateY(-50%) rotate(135deg);
+}
+.arrow__left:hover {
+	left: -5px;
+}
+.arrow__left:active {
+	border-color: #fff;
 }
 
 .arrow__right {
 	right: 0;
 	top: 50%;
-	transform: translateY(-50%);
-	border-left: 20px solid white;
+	transform: translateY(-50%) rotate(-45deg);
 }
-
+.arrow__right:active {
+	border-color: #fff;
+}
+.arrow__right:hover {
+	right: -5px;
+}
 /* footer */
-
 .footer {
 	background-color: rgb(17, 17, 17);
 	min-height: 20vh;
@@ -222,7 +277,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding-top: 10px;
+	padding: 10px 0px;
 	font-size: 20px;
 	text-align: left;
 }
@@ -283,7 +338,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .modal__button {
 	font-size: 20px;
 	background-color: rgb(63, 3, 3);
-	padding: 20px;
+	padding: 10px 20px;
 	border-radius: 5px;
 	text-transform: uppercase;
 	transition: 0.5s all;
@@ -294,4 +349,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 .modal__button:hover {
 	background-color: rgb(109, 4, 4);
+}
+
+@media (max-height: 768px) {
+	.content__text {
+		font-size: 20px;
+	}
 }
